@@ -1,7 +1,7 @@
 {
-  "name": "@univeral-react/components",
+  "name": "@universal-react/components",
   "version": "0.0.1",
-  "main": "index",
+  "main": "src/index.js",
   "license": "MIT",
   "dependencies": {
     "prop-types": "^15.6.0",
