@@ -1,0 +1,8 @@
+{
+  "title": "Universal React",
+  "renderer": {
+    "dll": [
+      "react"
+    ]
+  }
+}
