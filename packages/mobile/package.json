@@ -7,9 +7,9 @@
     "test": "jest"
   },
   "dependencies": {
+    "@universal-react/components": "^0.0.1",
     "react": "^16.1.1",
-    "react-native": "^0.50.3",
-    "@universal-react/components": "^0.0.1"
+    "react-native": "^0.50.3"
   },
   "devDependencies": {
     "babel-jest": "21.2.0",

@@ -1,44 +1,82 @@
 {
   "name": "@universal-react/desktop",
+  "productName": "Universal React",
   "version": "0.0.1",
-  "license": "MIT",
+  "private": true,
+  "description": "My Electron application description",
+  "main": "src/index.js",
   "scripts": {
-    "dev": "electron-webpack dev",
     "add:pack": "lerna add --scope=@universal-react/desktop",
-    "build:compile": "electron-webpack",
-    "build:dll": "electron-webpack dll",
-    "pack": "electron-builder --dir",
-    "dist": "electron-builder"
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "publish": "electron-forge publish",
+    "lint": "eslint --cache --color --ext .jsx,.js src"
   },
-  "build": {
-    "asar": false
-  },
-  "devDependencies": {
-    "7zip-bin-mac": "^1.0.1",
-    "babel-plugin-module-resolver": "^3.0.0",
-    "babel-plugin-transform-runtime": "^6.23.0",
-    "babel-preset-react-native": "^4.0.0",
-    "babel-preset-stage-0": "^6.24.1",
-    "devtron": "^1.4.0",
-    "electron": "^1.7.9",
-    "electron-builder": "^19.45.5",
-    "electron-packager": "^9.1.0",
-    "electron-rebuild": "^1.6.0",
-    "electron-webpack": "^1.11.0",
-    "webpack": "^3.8.1"
+  "keywords": [],
+  "author": "wahmed",
+  "license": "MIT",
+  "config": {
+    "forge": {
+      "make_targets": {
+        "win32": [
+          "squirrel"
+        ],
+        "darwin": [
+          "zip"
+        ],
+        "linux": [
+          "deb",
+          "rpm"
+        ]
+      },
+      "electronPackagerConfig": {
+        "packageManager": "yarn",
+        "deferSymlinks": false
+      },
+      "electronWinstallerConfig": {
+        "name": "desktop"
+      },
+      "electronInstallerDebian": {},
+      "electronInstallerRedhat": {},
+      "github_repository": {
+        "owner": "",
+        "name": ""
+      },
+      "windowsStoreConfig": {
+        "packageName": "",
+        "name": "desktop_3"
+      }
+    }
   },
   "dependencies": {
     "@universal-react/components": "^0.0.1",
-    "babel-preset-react": "^6.24.1",
+    "electron-compile": "^6.4.2",
     "electron-devtools-installer": "^2.2.1",
     "electron-is-dev": "^0.3.0",
     "electron-packager": "^9.1.0",
+    "electron-squirrel-startup": "^1.0.0",
     "electron-window": "^0.8.1",
     "electron-window-state": "^4.1.1",
     "prop-types": "^15.6.0",
     "react": "^16.1.1",
     "react-dom": "^16.1.1",
-    "react-native-web": "^0.1.14",
-    "source-map-support": "^0.5.0"
+    "react-hot-loader": "^3.1.3",
+    "react-native-web": "^0.1.14"
+  },
+  "devDependencies": {
+    "babel-plugin-module-resolver": "^3.0.0",
+    "babel-plugin-transform-async-to-generator": "^6.24.1",
+    "babel-plugin-transform-es2015-classes": "^6.24.1",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-react-hot-loader": "^1.0.0",
+    "babel-preset-react-native": "^4.0.0",
+    "babel-preset-stage-0": "^6.24.1",
+    "devtron": "^1.4.0",
+    "electron-forge": "^4.1.3",
+    "electron-prebuilt-compile": "1.7.9"
   }
 }
