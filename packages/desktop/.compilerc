@@ -1,0 +1,86 @@
+{
+  "env": {
+    "development": {
+      "application/javascript": {
+        "presets": [
+          [
+            "env",
+            {
+              "targets": {
+                "electron": "1.7.9"
+              }
+            }
+          ],
+          "stage-0",
+          "react-native"
+        ],
+        "plugins": [
+          [
+            "transform-runtime",
+            {
+              "polyfill": false,
+              "regenerator": true
+            }
+          ],
+          [
+            "module-resolver",
+            {
+              "extensions": [
+                ".web.js",
+                ".js",
+                ".jsx",
+                ".mjs"
+              ],
+              "alias": {
+                "react-native": "react-native-web",
+                "react/lib/ReactNativePropRegistry": "react-native-web/dist/modules/ReactNativePropRegistry"
+              }
+            }
+          ]
+        ],
+        "sourceMaps": "inline"
+      }
+    },
+    "production": {
+      "application/javascript": {
+        "presets": [
+          [
+            "env",
+            {
+              "targets": {
+                "electron": "1.7.9"
+              }
+            }
+          ],
+          "stage-0",
+          "react-native"
+        ],
+        "plugins": [
+          [
+            "transform-runtime",
+            {
+              "polyfill": false,
+              "regenerator": true
+            }
+          ],
+          [
+            "module-resolver",
+            {
+              "extensions": [
+                ".web.js",
+                ".js",
+                ".jsx",
+                ".mjs"
+              ],
+              "alias": {
+                "react-native": "react-native-web",
+                "react/lib/ReactNativePropRegistry": "react-native-web/dist/modules/ReactNativePropRegistry"
+              }
+            }
+          ]
+        ],
+        "sourceMaps": "none"
+      }
+    }
+  }
+}
