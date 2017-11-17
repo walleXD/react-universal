@@ -1,7 +1,7 @@
 {
   "name": "@universal-react/desktop",
   "productName": "Universal React",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "private": true,
   "description": "My Electron application description",
   "main": "src/index.js",
